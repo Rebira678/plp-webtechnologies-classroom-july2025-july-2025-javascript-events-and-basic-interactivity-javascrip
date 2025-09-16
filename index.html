@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Web Experience</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <h1>Interactive Web Experience</h1>
+    <button id="darkModeToggle" class="btn">Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <!-- COUNTER SECTION -->
+    <section class="card counter-section">
+      <h2>Counter Game 🎮</h2>
+      <div class="counter-display">0</div>
+      <div class="counter-buttons">
+        <button id="incrementBtn" class="btn">+1</button>
+        <button id="decrementBtn" class="btn">-1</button>
+        <button id="resetBtn" class="btn">Reset</button>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="card faq-section">
+      <h2>FAQ ❓</h2>
+      <div class="faq">
+        <button class="faq-question">What is this project?</button>
+        <div class="faq-answer">This project demonstrates multiple interactive features using JavaScript and CSS.</div>
+      </div>
+      <div class="faq">
+        <button class="faq-question">Can I play with the counter?</button>
+        <div class="faq-answer">Yes! Increase, decrease, or reset the counter as you like.</div>
+      </div>
+    </section>
+
+    <!-- TABBED CONTENT SECTION -->
+<section class="card tabs-section">
+  <h2>Tabbed Content 📑</h2>
+
+  <!-- Tab Buttons -->
+  <div class="tabs">
+    <button class="tab-button active" data-tab="tab1">Quiz</button>
+    <button class="tab-button" data-tab="tab2">Color</button>
+    <button class="tab-button" data-tab="tab3">To-Do</button>
+  </div>
+
+  <!-- Tab 1: Quiz -->
+  <div class="tab-content active" id="tab1">
+    <h3>Mini Quiz 📝</h3>
+    <p>What is 5 + 3?</p>
+    <button class="quiz-btn" data-answer="8">8</button>
+    <button class="quiz-btn" data-answer="7">7</button>
+    <button class="quiz-btn" data-answer="10">10</button>
+    <p id="quizFeedback"></p>
+  </div>
+
+  <!-- Tab 2: Random Color Generator -->
+  <div class="tab-content" id="tab2">
+    <h3>Random Color Generator 🎨</h3>
+    <div id="colorBox" style="width:100px;height:100px;background:#ccc;margin-bottom:10px;border-radius:10px;"></div>
+    <button id="generateColorBtn" class="btn">Generate Color</button>
+    <p id="colorCode"></p>
+  </div>
+
+  <!-- Tab 3: To-Do List -->
+  <div class="tab-content" id="tab3">
+    <h3>Simple To-Do List ✅</h3>
+    <input type="text" id="todoInput" placeholder="Add new task">
+    <button id="addTodoBtn" class="btn">Add</button>
+    <ul id="todoList"></ul>
+  </div>
+</section>
+
+
+    <!-- FORM SECTION -->
+    <section class="card form-section">
+      <h2>Sign Up Form 📝</h2>
+      <form id="signupForm" novalidate>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+        <small class="error-msg"></small>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+        <small class="error-msg"></small>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <small class="error-msg"></small>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+      <p id="formSuccess" class="success-msg"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
